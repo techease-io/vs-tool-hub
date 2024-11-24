@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" ?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+    <Metadata>
+        <Identity Id="OpenOutputFolder.a2208a38-b69c-4801-a2b0-a69e3805a607" Version="1.0" Language="en-US" Publisher="techease.io" />
+        <DisplayName>Open Output Folder</DisplayName>
+        <Description xml:space="preserve">A Visual Studio extension that adds a quick option to open the output folder of your project directly from the IDE, saving time and improving workflow efficiency.</Description>
+        <MoreInfo>https://github.com/techease-io/vs-tool-hub</MoreInfo>
+        <Icon>Resources\output-folder.png</Icon>
+        <PreviewImage>Resources\output-folder.png</PreviewImage>
+    </Metadata>
+    <Installation>
+        <InstallationTarget Version="[17.0,18.0]" Id="Microsoft.VisualStudio.Community">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+        <InstallationTarget Version="[17.0,18.0]" Id="Microsoft.VisualStudio.Pro">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+        <InstallationTarget Version="[17.0,18.0]" Id="Microsoft.VisualStudio.Enterprise">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+    </Installation>
+    <Dependencies>
+        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    </Dependencies>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,18.0)" DisplayName="Visual Studio core editor" />
+    </Prerequisites>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+    </Assets>
+</PackageManifest>
